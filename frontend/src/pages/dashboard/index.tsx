@@ -1,4 +1,4 @@
-import { canSSRGuest } from '../../utils/canSSRAuth'
+import { canSSRAuth } from '../../utils/canSSRAuth'
 import Head from 'next/head'
 import { Header } from '../../components/Header'
 
@@ -17,7 +17,7 @@ export default function Dashboard(){
     )
 }
 
-export const getServerSideProps = canSSRGuest(async (ctx) =>{
+export const getServerSideProps = canSSRAuth(async (ctx) =>{
     return {
         props: {}
     }
