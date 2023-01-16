@@ -19,17 +19,12 @@ class CreateProductService{
                 price: price,
                 description: description,
                 banner: banner,
-                category_id: category_id,
-
-                
-                
-            }
-            
+                category_id: category_id,                 
+            }           
         })
         return product;
         
     }
-
 }
 
 export { CreateProductService };

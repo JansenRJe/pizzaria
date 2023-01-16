@@ -42,7 +42,7 @@ export default function Product({ categoryList }: CategoryProps){
             return;
         }
 
-        if(image.type  === 'image/jpeg' || image.type === 'image/png'){
+        if(image.type  === 'image/jpeg' || image.type === 'image/png' || image.type === 'image/jpg'){
 
             setImageAvatar(image);
             setAvatarUrl(URL.createObjectURL(e.target.files[0]))
@@ -70,7 +70,7 @@ export default function Product({ categoryList }: CategoryProps){
             data.append('prive', price);
             data.append('description', description);
             data.append('category_id', categories[categorySelected].id);
-            data.append('fie', imageAvatar);
+            data.append('file', imageAvatar);
 
             const apiClient = setupAPIClient();
 
